@@ -1,4 +1,15 @@
 (function($) {
+	document.querySelector('.language-btn').addEventListener('click', function() {
+  document.querySelector('.language-list').classList.toggle('show');
+});
+
+// Opcional: Cerrar la lista si se hace clic fuera de ella
+window.addEventListener('click', function(e) {
+  if (!document.querySelector('.language-options').contains(e.target)) {
+    document.querySelector('.language-list').classList.remove('show');
+  }
+});
+
 	'use strict';
 
 	// Mean Menu
@@ -329,4 +340,6 @@
 
 
 })(jQuery);
+
+
 
